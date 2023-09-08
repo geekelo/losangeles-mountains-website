@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
+  overflow-wrap: break-word;
 }
 
 .navbar {
@@ -13,14 +14,12 @@
   font-size: 1.3rem;
 }
 
-.nav-item {
-}
-
-.navbar .nav-link {
+.nav-link {
   font-weight: 500;
   border-bottom: 2px solid #fff;
   padding: 0;
   margin-left: 2rem;
+  color: #fff;
 }
 
 .stickybar {
@@ -35,53 +34,175 @@
   margin-left: 2rem;
 }
 
-@media only screen and (max-width: 680px){
-  .header-section {
-    background-image: url(./assets/mbbg1.jpg);
+.history1 {
+  background-image: url('./assets/Bg.png');
+  background-position: top;
+  color: #414f6b;
+  width: 100%;
+}
+
+.divider {
+  display: flex;
+  background-color: #414f6b;
+  height: 5rem;
+  width: 100%;
+}
+
+/* Style rules for tthe Mobile screen size */
+@media only screen and (max-width: 480px){
+  #header-section {
+    background-image: url(./assets/mbbg.jpg);
+  }
+
+  .large-sections {
     background-size: cover;
-    background-position: -55px 0;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 680px;
+  }
+
+  header {
+    background-size: contain;
   }
 
   .navbar {
-    padding: 0 4%;
+    padding: 2% 4%;
   }
-    
 }
 
-@media only screen and (min-width: 680px) and (max-width: 1200px){
-  .header-section {
+/* Style rules for tthe Tablet screen size */
+@media only screen and (max-width: 1200px){
+  #header-section {
     background-image: url(./assets/mbbg1.jpg);
+  }
+  
+  .large-sections {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: aqua;
     height: 100vh;
   }
-}
 
-@media only screen and (min-width: 1049px ){
-  .header-section {
+  .navbar {
+    padding: 2% 15%;
+  }
+
+  /* history1 section */
+  .history1 {
+    background-image: url('./assets/Bg.png');
+  }
+
+  .content-container {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .historyTitle-container {
+    display: flex;
+    width: 30%;
+  }
+
+  .historyNumber {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: -0.97rem;
+    color: #697a95;
+  }
+
+  .historyText {
     display: flex;
     flex-direction: column;
-    background-image: url(./assets/landingbg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    justify-content: flex-end;
   }
 
-  .navbar {
-    padding: 0 15%;
+  .history {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .square {
+    height: 15px;
+    width: 15px;
+    background-color: #697a95;
+    margin-bottom: -0.2rem;
+  }
+
+  .description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    padding-top: 1rem;
+    font-weight: 500;
   }
 }
 
+/* Style rules for tthe Desktop screen size */
+@media only screen and (min-width: 1049px ){
+  #header-section {
+    background-image: url(./assets/landingbg.jpg);
+  }
+  
+  .large-sections {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+  }
 
+  .navbar {
+    padding: 2% 15%;
+  }
 
+  /* history1 section */
+  .content-container {
+    display: flex;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
 
+  .historyTitle-container {
+    display: flex;
+    width: 30%;
+  }
 
-.nav-link {
-  color: #fff;
+  .historyNumber {
+    font-size: 10rem;
+    font-weight: 700;
+    margin-bottom: -1.6rem;
+    color: #697a95;
+  }
+
+  .historyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .history {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .square {
+    height: 30px;
+    width: 30px;
+    background-color: #697a95;
+  }
+
+  .description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    padding-top: 1rem;
+    font-weight: 500;
+  }
 }
