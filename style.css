@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
+/* @@@@@@@@@@@ UNIVERSAL STYLE RULES @@@@@@@@@@@*/
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
   overflow-wrap: break-word;
 }
 
-/* nav section */
+/* Universal Nav section */
 .navbar {
   position: fixed;
   right: 0;
@@ -35,7 +36,11 @@
   margin-left: 2rem;
 }
 
-/* divider */
+.openmenu, .closemenu {
+  display: none;
+}
+
+/* Universal  Divider style */
 .defaultContainer {
   display: flex;
   background-color: #414f6b;
@@ -46,7 +51,7 @@ span {
   font-size: 5rem;
 }
 
-/* History and Climb section */
+/* Universal History and Climb section */
 .history1 {
   background-image: url('./assets/Bg.png');
   background-position: top;
@@ -76,6 +81,10 @@ span {
   background-color: #fff;
 }
 
+.climbTitle {
+  display: flex;
+}
+
 .climb .description {
   display: flex;
   align-items: center;
@@ -83,7 +92,7 @@ span {
   width: 100%
 }
 
-/* Carousel section */
+/* Universal Carousel section */
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -115,7 +124,7 @@ span {
   padding-left: 5px;
 }
 
-/* Carousel Indicators */
+/* Universal Carousel Indicators */
 .carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
@@ -131,8 +140,118 @@ span {
   padding: 7vh 0;
 }
 
-/* Style rules for the Mobile screen size */
+/* Universal Accordion Section */
+.scheduleContainer {
+  background-image: url('./assets/schedulebg.png');
+  background-position: bottom;
+  height: 100vh;
+  margin-top: 3rem;
+}
+
+.accordion {
+  width: 100%;
+  background-color: #414f6b;
+  padding-left: 15%;
+}
+
+.accordion-btn {
+  text-decoration: underline;
+  border-radius: 0;
+  font-weight: 500;
+  border: none;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-btn[aria-expanded='false'] {
+  background-color: #414f6b;
+  color: #e7e6e6;
+  text-decoration: underline;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.accordion-btn[aria-expanded='true'] {
+  background-color: #e7e6e6;
+  color: #414f6b;
+}
+
+.accordionContent {
+  background-color: #ffffffc7;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  left: 20%;
+  top: 10vh;
+  padding-top: 2vh;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: blink 0.5s ease-in-out; /* Add blink animation */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.accordionContent.show {
+  opacity: 1;
+}
+
+.scheduleTitle {
+  margin-left: 5vh;
+}
+
+/* Universal Schedule Table */
+.table, td, tr {
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+
+/* Selector below is used to apply styles to the content
+within a table (excluding the <caption> element).
+It's often used to target the rows, headers, and cell
+within the table. */
+.table>:not(caption)>*>* {
+  background-color: #00000000;
+}
+
+/* Universal Footer Style rules */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3vh 0 2vh 0;
+  font-style: italic;
+}
+
+.footerLogo {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  flex: 50%;
+  font-size: 3vh;
+  align-items: center;
+  justify-content: center;
+  color: #63769d;
+}
+
+/* @@@@@@@@@@@ MOBILE ONLY @@@@@@@@@@@ */
 @media only screen and (max-width: 480px){
+    /* Mobile Header section */
   #header-section {
     background-image: url(./assets/mbbg.jpg);
   }
@@ -150,35 +269,111 @@ span {
     padding: 2% 4%;
   }
 
+  .openmenu {
+    display: flex;
+    border: none;
+    justify-content: end;
+    margin-right: 2vh;
+    color: #fff;
+    background-color: #414f6b;
+    font-size: 5rem;
+  }
+
+  .material-symbols-outlined {
+    font-size: 4rem;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    line-height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50vh;
+    background-color: #414f6b;
+    color: #fff;
+  }
+
+  /* Mobile History and Climb section */
   .description {
     font-size: 0.4rem;
   }
 
+  .climbTitle-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .climb .description {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 100%;
+    font-size: 0.rem;
+  }
+
+  /* Mobile Carousel section */
   .carouselContainer {
     padding: 5vh 5% 5vh 5%;
   }
+
+  /* Mobile Accordion section */
+  .scheduleContainer {
+    height: 70vh;
+  }
+  
+  .accordionContent {
+    width: 70%;
+    margin: 3vh 0 0 -7%;
+  }
+
+  /* Mobile Footer section */
+  footer {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0 2vh 0;
+    font-style: italic;
+  }
+  
+  .footerLogo img {
+    width: 20vh;
+  }
+  
+  .copyright {
+    font-size: 1.5vh;
+    align-items: center;
+  }
 }
 
-/* Style rules for Moderately Medium screen sizes. */
+/* @@@@@@@@@@@ SMALL-MEDIUM ONLY @@@@@@@@@@@*/
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Small-Medium History and Climb section */
   .description {
     font-size: 0.2rem;
   }
   
+   /* Small-Medium Carousel section*/
   .carouselContainer {
     padding: 5vh 18% 5vh 18%;
   }
   
   .mobileCarousel {
-    width: 50vh;
+    width: 20vh;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .accordionContent {
+    width: 50%;
+  }
+
 }
 
-/* Style rules for tthe Tablet screen size */
+/* @@@@@@@@@@@ TABLET ONLY @@@@@@@@@@@ */
 @media only screen and (max-width: 1200px){
+  /* Tablet Header section*/
   #header-section {
     background-image: url(./assets/mbbg1.jpg);
   }
@@ -194,7 +389,7 @@ span {
     padding: 2% 15%;
   }
 
-  /* history1 section */
+  /* Tablet History and Climb section */
   .history1 {
     background-image: url('./assets/Bg.png');
   }
@@ -246,16 +441,28 @@ span {
     font-weight: 500;
   }
 
+  /* Tablet Carousel section*/
   .carouselInner-Containers {
     display: block;
     width: 80%;
     overflow: hidden;
     height: 350px;
   }
+
+  /* Tablet Accordion section */
+  .accordionContent {
+    width: 70%;
+    margin-left: -5%;
+  }
+
+  .table, td, tr {
+    
+  }
 }
 
-/* Style rules for tthe Desktop screen size */
+/* @@@@@@@@@@@ DESKTOP ONLY @@@@@@@@@@@ */
 @media only screen and (min-width: 1049px ){
+  /* Desktop Header section */
   #header-section {
     background-image: url(./assets/landingbg.jpg);
   }
@@ -273,10 +480,9 @@ span {
     padding: 2% 15%;
   }
 
-  /* history1 section */
+  /* Desktop History and Climb section */
   .content-container {
     display: flex;
-    /* background-color: rgba(255, 255, 255, 0.5); */
     flex-direction: column;
     width: 70%;
     margin: 0 auto;
