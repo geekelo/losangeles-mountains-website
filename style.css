@@ -7,6 +7,7 @@
   overflow-wrap: break-word;
 }
 
+/* nav section */
 .navbar {
   position: fixed;
   right: 0;
@@ -34,21 +35,103 @@
   margin-left: 2rem;
 }
 
+/* divider */
+.defaultContainer {
+  display: flex;
+  background-color: #414f6b;
+  width: 100%;
+  justify-content: center;
+}
+span {
+  font-size: 5rem;
+}
+
+/* History and Climb section */
 .history1 {
   background-image: url('./assets/Bg.png');
   background-position: top;
   color: #414f6b;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.divider {
-  display: flex;
-  background-color: #414f6b;
-  height: 5rem;
+.description {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+
+.climbTitle-container {
+  display:flex;
   width: 100%;
 }
 
-/* Style rules for tthe Mobile screen size */
+.climb {
+  background-color: #fff;
+}
+
+.climb .description {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  width: 100%
+}
+
+/* Carousel section */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2%  0;
+  gap: 1rem;
+}
+
+.carouselInner-Containers {
+  margin: auto;
+  width: 70%;
+}
+
+.carousel-btns {
+  background-color: #fff;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius:  50%;
+  border: none;
+}
+
+.desktopCarousel {
+  width: 80%;
+}
+
+.desktopImages {
+  width: 25%;
+  padding-left: 5px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-bottom: -10px;
+}
+
+.carouselContainer {
+  display: flex;
+  background-color: #414f6b9d;
+  width: 100%;
+  justify-content: center;
+  padding: 7vh 0;
+}
+
+/* Style rules for the Mobile screen size */
 @media only screen and (max-width: 480px){
   #header-section {
     background-image: url(./assets/mbbg.jpg);
@@ -66,6 +149,32 @@
   .navbar {
     padding: 2% 4%;
   }
+
+  .description {
+    font-size: 0.4rem;
+  }
+
+  .carouselContainer {
+    padding: 5vh 5% 5vh 5%;
+  }
+}
+
+/* Style rules for Moderately Medium screen sizes. */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .description {
+    font-size: 0.2rem;
+  }
+  
+  .carouselContainer {
+    padding: 5vh 18% 5vh 18%;
+  }
+  
+  .mobileCarousel {
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 /* Style rules for tthe Tablet screen size */
@@ -136,6 +245,13 @@
     padding-top: 1rem;
     font-weight: 500;
   }
+
+  .carouselInner-Containers {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    height: 350px;
+  }
 }
 
 /* Style rules for tthe Desktop screen size */
@@ -196,13 +312,6 @@
   }
 
   .description {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    color: #000;
-    padding-top: 1rem;
-    font-weight: 500;
   }
 }
