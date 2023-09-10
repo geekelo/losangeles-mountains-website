@@ -261,6 +261,23 @@ footer {
   color: #63769d;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 10vh;
+  right: 10vh;
+  height: 9vh;
+  border-radius: 50%;
+  width: 9vh;
+  background-color: #fff;
+  color: #414f6b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 5vh;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 /* @@@@@@@@@@@ MOBILE ONLY @@@@@@@@@@@ */
 @media only screen and (max-width: 480px) {
   /* Mobile Header section */
@@ -342,7 +359,7 @@ footer {
     font-size: 0.2rem;
   }
 
-   /* Small-Medium Carousel section*/
+  /* Small-Medium Carousel section */
   .carouselContainer {
     padding: 5vh 18% 5vh 18%;
   }
@@ -353,9 +370,10 @@ footer {
 }
 
 /* @@@@@@@@@@@ TABLET ONLY @@@@@@@@@@@ */
+
 /* (Contains mobile menu too) */
-@media only screen and (max-width: 1200px){
-  /* Tablet Header section*/
+@media only screen and (max-width: 1200px) {
+  /* Tablet Header section */
   #header-section {
     background-image: url(./assets/mbbg1.jpg);
   }
