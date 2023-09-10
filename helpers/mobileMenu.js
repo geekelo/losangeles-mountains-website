@@ -1,3 +1,9 @@
+// SUMMARY:
+// this class sets up event listeners and defines the actions to be taken when 
+// specific elements are clicked. This allows for interactive behavior on the 
+// webpage, where clicking certain elements triggers changes in the appearance or 
+// behavior of the page.
+
 class MobileMenumanager {
 
   // Constructor:
