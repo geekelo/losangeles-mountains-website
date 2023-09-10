@@ -1,4 +1,16 @@
+// SUMMARY:
+// This class is designed to generate tables based on the provided mountainScheduleData 
+// and append them to specified container elements. It creates rows for each schedule 
+// entry, with cells for date and address. The generated tables allow for displaying 
+// mountain schedules in a structured format.
+
 class ScheduleTableGenerator {
+
+  // CONSTRUCTOR:
+  // Initializes the class.
+  // Creates an array of mountainScheduleData containing two arrays of objects, 
+  // each representing a set of mountain schedules.
+
   constructor() {
     this.mountainScheduleData = [
       [
@@ -17,6 +29,15 @@ class ScheduleTableGenerator {
     this.generateTables();
   }
 
+  // generateTable(mountainindex, container):
+  // Takes two arguments: mountainindex (index of the mountain schedule data to use) and container (DOM element where the table will be appended).
+  // Creates a new HTML table element and assigns it the class 'table'.
+  // Iterates through the mountain schedule data specified by mountainindex.
+  // For each entry, it creates a new row (tr) and two cells (td) for date and address.
+  // Populates the cells with the corresponding date and address data from mountainScheduleData.
+  // Appends the row to the table.
+  // Appends the table to the provided container element.
+
   generateTable(mountainindex, container) {
     const table = document.createElement('table');
     table.classList.add('table');
@@ -32,6 +53,11 @@ class ScheduleTableGenerator {
 
     container.appendChild(table);
 }
+
+  // generateTables():
+  // Loops through the mountainScheduleData array.
+  // For each set of mountain schedules, it finds the corresponding container element using 
+  // getElementById and generates a table using generateTable.
 
   generateTables() {
     for (let i = 0; i < this.mountainScheduleData.length; i++) {

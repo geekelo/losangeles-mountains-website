@@ -1,4 +1,15 @@
+// SUMAMARY:
+// this class handles the initialization of carousel images, 
+// both for mobile and desktop views. It creates the necessary HTML elements, adds images to the carousels, 
+// and sets up indicators to navigate through the images.
+
 class CarouselHandler {
+
+  // Constructor:
+  // Initializes the class.
+  // Creates an array carouselImages containing objects with src (image source) 
+  // and alt (image alt text) properties.
+  
   constructor() {
     this.carouselImages = [ 
       {
@@ -57,6 +68,14 @@ class CarouselHandler {
     // ... (Rest of your code) ...
   }
 
+  // displayCarouselImages():
+  // Finds the carousel inner container and carousel indicators elements.
+  //  Iterates through carouselImages.
+  //  For each image, it creates a div element with the class 'carousel-item' and adds an img element with the corresponding src and alt.
+  //  The first image is marked as active.
+  //  Creates indicators for each image.
+  //  Appends the created elements to the carousel.
+
   displayCarouselImages() {
     const carouselInner = document.querySelector('.mobileCarousel');
     const carouselIndicators = document.querySelector('.carousel-indicators'); // Add this line
@@ -84,6 +103,13 @@ class CarouselHandler {
     });
   }
   
+  // addImagesToDesktopCarousel():
+  // Finds the desktop carousel inner container and carousel indicators elements.
+  // Loops through the images in groups of 4.
+  // Creates a div element for each set of 4 images, adding the class 'carousel-item' and marking the first as active.
+  // Adds 4 images to each carousel item.
+  // Creates an indicator for each item.
+  // Appends the created elements to the desktop carousel.
 
   addImagesToDesktopCarousel() {
     const carouselInnerDesktop = document.querySelector('.desktopCarousel');

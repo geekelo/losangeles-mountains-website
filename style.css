@@ -27,6 +27,12 @@
 .stickybar {
   background-color: #fff;
   height: 20vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 3vh;
+  z-index: 1;
 }
 
 .stickybar .nav-link {
@@ -251,7 +257,7 @@ footer {
 
 /* @@@@@@@@@@@ MOBILE ONLY @@@@@@@@@@@ */
 @media only screen and (max-width: 480px){
-    /* Mobile Header section */
+  /* Mobile Header section */
   #header-section {
     background-image: url(./assets/mbbg.jpg);
   }
@@ -269,31 +275,8 @@ footer {
     padding: 2% 4%;
   }
 
-  .openmenu {
-    display: flex;
-    border: none;
-    justify-content: end;
-    margin-right: 2vh;
-    color: #fff;
-    background-color: #414f6b;
-    font-size: 5rem;
-  }
-
-  .material-symbols-outlined {
-    font-size: 4rem;
-  }
-
-  .mobileMenu {
-    display: flex;
-    flex-direction: column;
-    line-height: 6rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 50vh;
-    background-color: #414f6b;
-    color: #fff;
+  .logo {
+    width: 5vh;
   }
 
   /* Mobile History and Climb section */
@@ -359,19 +342,19 @@ footer {
     padding: 5vh 18% 5vh 18%;
   }
   
-  .mobileCarousel {
+  /* .mobileCarousel {
     width: 20vh;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   .accordionContent {
     width: 50%;
   }
-
 }
 
 /* @@@@@@@@@@@ TABLET ONLY @@@@@@@@@@@ */
+/* (Contains mobile menu too) */
 @media only screen and (max-width: 1200px){
   /* Tablet Header section*/
   #header-section {
@@ -386,7 +369,68 @@ footer {
   }
 
   .navbar {
-    padding: 2% 15%;
+    padding: 2% 5%;
+  }
+
+  .openmenu {
+    display: flex;
+    border: none;
+    background-color: #00000000;
+  }
+
+  .material-symbols-outlined {
+    font-size: 10vh;
+    color: #fff;
+  }
+
+  .stickybar .material-symbols-outlined {
+    color: #414f6b;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  /* Mobile Active menu */
+  .openmenu.active {
+    display: none;
+  }
+
+  .closemenu.active {
+    position: fixed;
+    top: 2vh;
+    margin-top: 0;
+    display: flex;
+    border: none;
+    background-color: #00000000;
+  }
+
+  #menu.active {
+    background-color: #414f6b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60vh;
+    padding: 0 5vh 8vh 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vh;
+    margin: 0;
+  }
+
+  #menu.active .material-symbols-outlined {
+    color: #fff;
+  }
+
+  .nav-link.active {
+    display: block;
+    text-decoration: none;
+    margin-left: 0;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
   }
 
   /* Tablet History and Climb section */
@@ -449,14 +493,16 @@ footer {
     height: 350px;
   }
 
+  .mobileCarousel {
+    width: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* Tablet Accordion section */
   .accordionContent {
     width: 70%;
     margin-left: -5%;
-  }
-
-  .table, td, tr {
-    
   }
 }
 
