@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* @@@@@@@@@@@ UNIVERSAL STYLE RULES @@@@@@@@@@@*/
+/* @@@@@@@@@@@ UNIVERSAL STYLE RULES @@@@@@@@@@@ */
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +42,8 @@
   margin-left: 2rem;
 }
 
-.openmenu, .closemenu {
+.openmenu,
+.closemenu {
   display: none;
 }
 
@@ -53,6 +54,7 @@
   width: 100%;
   justify-content: center;
 }
+
 span {
   font-size: 5rem;
 }
@@ -79,7 +81,7 @@ span {
 }
 
 .climbTitle-container {
-  display:flex;
+  display: flex;
   width: 100%;
 }
 
@@ -95,7 +97,7 @@ span {
   display: flex;
   align-items: center;
   padding-left: 5%;
-  width: 100%
+  width: 100%;
 }
 
 /* Universal Carousel section */
@@ -117,7 +119,7 @@ span {
   background-color: #fff;
   height: 0.8rem;
   width: 0.8rem;
-  border-radius:  50%;
+  border-radius: 50%;
   border: none;
 }
 
@@ -199,9 +201,11 @@ span {
   0% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 0.5;
   }
@@ -216,7 +220,9 @@ span {
 }
 
 /* Universal Schedule Table */
-.table, td, tr {
+.table,
+td,
+tr {
   border: none;
   text-align: center;
   padding: 0;
@@ -226,8 +232,8 @@ span {
 within a table (excluding the <caption> element).
 It's often used to target the rows, headers, and cell
 within the table. */
-.table>:not(caption)>*>* {
-  background-color: #00000000;
+.table > :not(caption) > * > * {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* Universal Footer Style rules */
@@ -256,7 +262,7 @@ footer {
 }
 
 /* @@@@@@@@@@@ MOBILE ONLY @@@@@@@@@@@ */
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
   /* Mobile Header section */
   #header-section {
     background-image: url(./assets/mbbg.jpg);
@@ -294,7 +300,6 @@ footer {
     align-items: center;
     padding-left: 5%;
     width: 100%;
-    font-size: 0.rem;
   }
 
   /* Mobile Carousel section */
@@ -306,7 +311,7 @@ footer {
   .scheduleContainer {
     height: 70vh;
   }
-  
+
   .accordionContent {
     width: 70%;
     margin: 3vh 0 0 -7%;
@@ -319,34 +324,28 @@ footer {
     padding: 3vh 0 2vh 0;
     font-style: italic;
   }
-  
+
   .footerLogo img {
     width: 20vh;
   }
-  
+
   .copyright {
     font-size: 1.5vh;
     align-items: center;
   }
 }
 
-/* @@@@@@@@@@@ SMALL-MEDIUM ONLY @@@@@@@@@@@*/
+/* @@@@@@@@@@@ SMALL-MEDIUM ONLY @@@@@@@@@@@ */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   /* Small-Medium History and Climb section */
   .description {
     font-size: 0.2rem;
   }
-  
+
    /* Small-Medium Carousel section*/
   .carouselContainer {
     padding: 5vh 18% 5vh 18%;
   }
-  
-  /* .mobileCarousel {
-    width: 20vh;
-    margin-left: auto;
-    margin-right: auto;
-  } */
 
   .accordionContent {
     width: 50%;
@@ -360,7 +359,7 @@ footer {
   #header-section {
     background-image: url(./assets/mbbg1.jpg);
   }
-  
+
   .large-sections {
     background-repeat: no-repeat;
     background-size: cover;
@@ -375,7 +374,7 @@ footer {
   .openmenu {
     display: flex;
     border: none;
-    background-color: #00000000;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .material-symbols-outlined {
@@ -402,7 +401,7 @@ footer {
     margin-top: 0;
     display: flex;
     border: none;
-    background-color: #00000000;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   #menu.active {
@@ -485,7 +484,7 @@ footer {
     font-weight: 500;
   }
 
-  /* Tablet Carousel section*/
+  /* Tablet Carousel section */
   .carouselInner-Containers {
     display: block;
     width: 80%;
@@ -507,12 +506,12 @@ footer {
 }
 
 /* @@@@@@@@@@@ DESKTOP ONLY @@@@@@@@@@@ */
-@media only screen and (min-width: 1049px ){
+@media only screen and (min-width: 1049px) {
   /* Desktop Header section */
   #header-section {
     background-image: url(./assets/landingbg.jpg);
   }
-  
+
   .large-sections {
     display: flex;
     flex-direction: column;

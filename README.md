@@ -53,7 +53,7 @@ Head to the <a href="#live-demo">LIVE DEMO SECTIOON</a> for Live links and prese
 </details>
 
 <details>
-  <summary>CSS</summary>
+  <summary>CSS | BootStrap</summary>
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</a></li>
   </ul>

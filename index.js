@@ -14,9 +14,9 @@ const initializeAccordionEffect = new AccordionEffectManager();
 
 export default intializeScroll;
 export {
-    initializeMobileMenu,
-    initializeCarousel,
-    intializeAccordion,
-    initializeGenerator,
-    initializeAccordionEffect,
+  initializeMobileMenu,
+  initializeCarousel,
+  intializeAccordion,
+  initializeGenerator,
+  initializeAccordionEffect,
 };
