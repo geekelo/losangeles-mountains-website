@@ -184,7 +184,7 @@ You can offer Contributions, submit an [issue](../../issues/), and make a featur
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank COALITION TECHNOLOGIES for inspiring this project
-> Original design idea by [COALITION TECHNOLOGIES.](#)
+> Original design idea by [COALITION TECHNOLOGIES.](https://www.figma.com/file/x5M29C6yMIMASOW9rQNDxt/Untitled?type=design&node-id=0%3A1&mode=design&t=HNnz5DrIZ1UvKtRd-1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
