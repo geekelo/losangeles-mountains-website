@@ -15,7 +15,7 @@
 
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Global Female Hackathon Webpage ](#-global-female-hackathon-webpage-)
+- [📖 LMW Webpage ](#-lmw-webpage-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -36,9 +36,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Global Female Hackathon Webpage <a name="about-project"></a>
+# 📖 LMW Webpage <a name="about-project"></a>
 
-**LOSANGELES MOUNTAINS Webpage**  is an innovative and user-friendly web application designed to provide residents and visitors of Los Angeles with a comprehensive and interactive experience related to the stunning mountain ranges that surround the city. This application serves as a valuable resource for exploring, enjoying, and staying informed about the Los Angeles mountains. 
+**LMW**  is an innovative and user-friendly web application designed to provide residents and visitors of Los Angeles with a comprehensive and interactive experience related to the stunning mountain ranges that surround the city. This application serves as a valuable resource for exploring, enjoying, and staying informed about the Los Angeles mountains. 
 Head to the <a href="#live-demo">LIVE DEMO SECTIOON</a> for Live links and presentations
 
 ## 🛠 Built With <a name="built-with"></a>
