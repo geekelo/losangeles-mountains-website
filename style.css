@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* @@@@@@@@@@@ UNIVERSAL STYLE RULES @@@@@@@@@@@ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  overflow-wrap: break-word;
+}
+
+/* Universal Nav section */
+.navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  font-size: 1.3rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  border-bottom: 2px solid #fff;
+  padding: 0;
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.stickybar {
+  background-color: #fff;
+  height: 20vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 3vh;
+  z-index: 1;
+}
+
+.stickybar .nav-link {
+  color: #414f6b;
+  border-bottom: 2px solid #414f6b;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.openmenu,
+.closemenu {
+  display: none;
+}
+
+/* Universal  Divider style */
+.defaultContainer {
+  display: flex;
+  background-color: #414f6b;
+  width: 100%;
+  justify-content: center;
+}
+
+span {
+  font-size: 5rem;
+}
+
+/* Universal History and Climb section */
+.history1 {
+  background-image: url('./assets/Bg.png');
+  background-position: top;
+  color: #414f6b;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+
+.climbTitle-container {
+  display: flex;
+  width: 100%;
+}
+
+.climb {
+  background-color: #fff;
+}
+
+.climbTitle {
+  display: flex;
+}
+
+.climb .description {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  width: 100%;
+}
+
+/* Universal Carousel section */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2%  0;
+  gap: 1rem;
+}
+
+.carouselInner-Containers {
+  margin: auto;
+  width: 70%;
+}
+
+.carousel-btns {
+  background-color: #fff;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.desktopCarousel {
+  width: 80%;
+}
+
+.desktopImages {
+  width: 25%;
+  padding-left: 5px;
+}
+
+/* Universal Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-bottom: -10px;
+}
+
+.carouselContainer {
+  display: flex;
+  background-color: #414f6b9d;
+  width: 100%;
+  justify-content: center;
+  padding: 7vh 0;
+}
+
+/* Universal Accordion Section */
+.scheduleContainer {
+  background-image: url('./assets/schedulebg.png');
+  background-position: bottom;
+  height: 100vh;
+  margin-top: 3rem;
+}
+
+.accordion {
+  width: 100%;
+  background-color: #414f6b;
+  padding-left: 15%;
+}
+
+.accordion-btn {
+  text-decoration: underline;
+  border-radius: 0;
+  font-weight: 500;
+  border: none;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-btn[aria-expanded='false'] {
+  background-color: #414f6b;
+  color: #e7e6e6;
+  text-decoration: underline;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.accordion-btn[aria-expanded='true'] {
+  background-color: #e7e6e6;
+  color: #414f6b;
+}
+
+.accordionContent {
+  background-color: #ffffffc7;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  left: 20%;
+  top: 10vh;
+  padding-top: 2vh;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: blink 0.5s ease-in-out; /* Add blink animation */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.accordionContent.show {
+  opacity: 1;
+}
+
+.scheduleTitle {
+  margin-left: 5vh;
+}
+
+/* Universal Schedule Table */
+.table,
+td,
+tr {
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+
+/* Selector below is used to apply styles to the content
+within a table (excluding the <caption> element).
+It's often used to target the rows, headers, and cell
+within the table. */
+.table > :not(caption) > * > * {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Universal Footer Style rules */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3vh 0 2vh 0;
+  font-style: italic;
+}
+
+.footerLogo {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  flex: 50%;
+  font-size: 3vh;
+  align-items: center;
+  justify-content: center;
+  color: #63769d;
+}
+
+/* Universal Scro to top btn */
+.scroll-to-top {
+  position: fixed;
+  bottom: 10vh;
+  right: 10vh;
+  height: 9vh;
+  border-radius: 50%;
+  width: 9vh;
+  background-color: #fff;
+  color: #414f6b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 5vh;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* @@@@@@@@@@@ MOBILE ONLY @@@@@@@@@@@ */
+@media only screen and (max-width: 480px) {
+  /* Mobile Header section */
+  #header-section {
+    background-image: url(./assets/mbbg.jpg);
+  }
+
+  .large-sections {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    background-size: contain;
+  }
+
+  .navbar {
+    padding: 2% 4%;
+  }
+
+  .logo {
+    width: 5vh;
+  }
+
+  /* Mobile History and Climb section */
+  .description {
+    font-size: 0.4rem;
+  }
+
+  .climbTitle-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .climb .description {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 100%;
+  }
+
+  /* Mobile Carousel section */
+  .carouselContainer {
+    padding: 5vh 5% 5vh 5%;
+  }
+
+  /* Mobile Accordion section */
+  .scheduleContainer {
+    height: 70vh;
+  }
+
+  .accordionContent {
+    width: 70%;
+    margin: 3vh 0 0 -7%;
+  }
+
+  /* Mobile Footer section */
+  footer {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0 2vh 0;
+    font-style: italic;
+  }
+
+  .footerLogo img {
+    width: 20vh;
+  }
+
+  .copyright {
+    font-size: 1.5vh;
+    align-items: center;
+  }
+
+  /* Universal Scro to top btn */
+  .scroll-to-top {
+    bottom: 5vh;
+    right: 2.5vh;
+  }
+}
+
+/* @@@@@@@@@@@ SMALL-MEDIUM ONLY @@@@@@@@@@@ */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Small-Medium History and Climb section */
+  .description {
+    font-size: 0.2rem;
+  }
+
+  /* Small-Medium Carousel section */
+  .carouselContainer {
+    padding: 5vh 18% 5vh 18%;
+  }
+
+  .accordionContent {
+    width: 50%;
+  }
+}
+
+/* @@@@@@@@@@@ TABLET ONLY @@@@@@@@@@@ */
+
+/* (Contains mobile menu too) */
+@media only screen and (max-width: 1200px) {
+  /* Tablet Header section */
+  #header-section {
+    background-image: url(./assets/mbbg1.jpg);
+  }
+
+  .large-sections {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .navbar {
+    padding: 2% 5%;
+  }
+
+  .openmenu {
+    display: flex;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .material-symbols-outlined {
+    font-size: 10vh;
+    color: #fff;
+  }
+
+  .stickybar .material-symbols-outlined {
+    color: #414f6b;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  /* Mobile Active menu */
+  .openmenu.active {
+    display: none;
+  }
+
+  .closemenu.active {
+    position: fixed;
+    top: 2vh;
+    margin-top: 0;
+    display: flex;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #menu.active {
+    background-color: #414f6b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60vh;
+    padding: 0 5vh 8vh 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vh;
+    margin: 0;
+  }
+
+  #menu.active .material-symbols-outlined {
+    color: #fff;
+  }
+
+  .nav-link.active {
+    display: block;
+    text-decoration: none;
+    margin-left: 0;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  /* Tablet History and Climb section */
+  .history1 {
+    background-image: url('./assets/Bg.png');
+  }
+
+  .content-container {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .historyTitle-container {
+    display: flex;
+    width: 30%;
+  }
+
+  .historyNumber {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: -0.97rem;
+    color: #697a95;
+  }
+
+  .historyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .history {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .square {
+    height: 15px;
+    width: 15px;
+    background-color: #697a95;
+    margin-bottom: -0.2rem;
+  }
+
+  .description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    padding-top: 1rem;
+    font-weight: 500;
+  }
+
+  /* Tablet Carousel section */
+  .carouselInner-Containers {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    height: 350px;
+  }
+
+  .mobileCarousel {
+    width: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Tablet Accordion section */
+  .accordionContent {
+    width: 70%;
+    margin-left: -5%;
+  }
+}
+
+/* @@@@@@@@@@@ DESKTOP ONLY @@@@@@@@@@@ */
+@media only screen and (min-width: 1049px) {
+  /* Desktop Header section */
+  #header-section {
+    background-image: url(./assets/landingbg.jpg);
+  }
+
+  .large-sections {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+  }
+
+  .navbar {
+    padding: 2% 15%;
+  }
+
+  /* Desktop History and Climb section */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .historyTitle-container {
+    display: flex;
+    width: 30%;
+  }
+
+  .historyNumber {
+    font-size: 10rem;
+    font-weight: 700;
+    margin-bottom: -1.6rem;
+    color: #697a95;
+  }
+
+  .historyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .history {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .square {
+    height: 30px;
+    width: 30px;
+    background-color: #697a95;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
