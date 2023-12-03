@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="https://dl.dropboxusercontent.com/s/110axfscx8e9q3q/Screenshot%202023-04-27%20024351.png" alt="logo" width=""  height="auto" />
+    <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/project-signature.gif" alt="signature" width=""  height="auto" />
   <br/>
 
   <h3><b>A Personal Portfolio Site</b></h3>
