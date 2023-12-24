@@ -2,10 +2,9 @@
 
 <div align="center">
 
-<img src="https://geekelo.com.ng/wp-content/uploads/2023/12/project-signature.gif" alt="signature" width=""  height="auto" />
+ <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/signature.gif" alt="signature" >
+  
   <br/>
-
-  <h3><b>A Personal Portfolio Site</b></h3>
 
 </div>
 
